@@ -1,0 +1,76 @@
+/* Contenedor exterior: SOLO recorta (overflow + border-radius), nunca se transforma */
+.show-card-wrapper {
+  width: 298px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 6px;
+  flex: 0 0 auto;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Contenedor interior: SOLO se escala, no tiene overflow ni border-radius propio */
+.show-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform: translateZ(0); /* fuerza la capa de composición desde el inicio */
+}
+
+.show-card-wrapper:hover .show-card {
+  transform: scale(1.08);
+}
+
+.show-card-wrapper:hover {
+  z-index: 10;
+}
+
+.show-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.show-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 40%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  margin: 0 0 0 10px;
+}
+
+.show-card-wrapper:hover .show-card__overlay {
+  opacity: 1;
+}
+
+.show-card__title {
+  font-size: 0.95rem;
+  margin: 0 0 4px 0;
+  color: white;
+}
+
+.show-card__duration {
+  font-size: 0.75rem;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.show-card__synopsis {
+  font-size: 0.75rem;
+  color: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

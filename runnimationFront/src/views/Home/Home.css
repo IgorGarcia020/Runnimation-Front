@@ -1,0 +1,11 @@
+.home {
+  background-color: #0d0f14;
+  min-height: 100vh;
+  padding: 0 !important;
+}
+
+h2 {
+  color: white;
+  font-size: 24px;
+  margin: 20px 60px;
+}

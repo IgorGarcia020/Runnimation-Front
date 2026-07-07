@@ -1,0 +1,81 @@
+.hero-banner {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-overlay {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  padding: 60px;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.hero-actions {
+  height: 34px;
+  flex-direction: row;
+}
+.button-look {
+  background-color: #03b3fc;
+  color: white;
+  border: none;
+  margin-right: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.button-watchlist {
+  background-color: white;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  height: 34px;
+  position: relative;
+  top: 6px;
+}
+.button-watchlist img {
+  max-width: 20px;
+}
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 40px;
+  font-weight: normal;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+.hero-arrow:hover,
+.hero-arrow:active,
+.hero-arrow:focus,
+.hero-arrow:focus-visible {
+  outline: none !important;
+  box-shadow: none;
+  background: none !important;
+  color: white;
+}
+
+.hero-arrow-left {
+  left: 16px;
+}
+
+.hero-arrow-right {
+  right: 16px;
+}
