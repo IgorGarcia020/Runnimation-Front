@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import "./Banner.css";
+import { useNavigate } from "react-router-dom";
 function Banner({ shows }) {
   const [i, setIndex] = useState(0);
+  const navigate = useNavigate(); // 👈 se llama acá arriba, no dentro de seeInfo
 
   useEffect(() => {
     const time = setInterval(() => {
@@ -22,6 +24,7 @@ function Banner({ shows }) {
 
   const show = shows[i];
 
+  const seeInfo = () => {navigate("/info");}
   return (
     <div
       className="hero-banner"
@@ -39,7 +42,7 @@ function Banner({ shows }) {
         <h1 className="hero-title">{show.title}</h1>
         <p className="hero-synopsis">{show.synopsis}</p>
         <div className="hero-actions">
-          <button className="button-look">Ver Datos</button>
+          <button className="button-look" onClick={seeInfo}>Ver Datos</button>
           <button className="button-watchlist">
             <img src="/plus.svg" />
           </button>

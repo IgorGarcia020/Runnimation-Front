@@ -17,10 +17,11 @@ function Header() {
         </Col>
         <Col xs={4}>
           <Nav>
-            <Nav.Link href="">Inicio</Nav.Link>
+            <Nav.Link href="/home">Inicio</Nav.Link>
             <Nav.Link href="">Series</Nav.Link>
             <Nav.Link href="">Listas</Nav.Link>
             <Nav.Link href="">Estrenos</Nav.Link>
+            <Nav.Link href="">¿Que veo esta noche?</Nav.Link>
           </Nav>
         </Col>
         <Col
@@ -33,8 +34,7 @@ function Header() {
               <Search />
             </InputGroup.Text>
           </InputGroup>
-          <Form.Select size="sm" style={{ width: "70px" }}>
-          </Form.Select>
+          <Form.Select size="sm" style={{ width: "70px" }}></Form.Select>
           <Button size="sm">Iniciar sesión</Button>
         </Col>
       </Row>

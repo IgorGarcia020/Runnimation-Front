@@ -8,6 +8,7 @@ import Friends from "./Friends/Friends";
 import Trending from "./Trending/Trending";
 import Rating from "./Rating/Rating";
 import Series from "./Series/Series";
+import Movies from "./Movies/Movies";
 
 import Cartoon from "./Cartoon/Cartoon";
 import Anime from "./Anime/Anime";
@@ -64,6 +65,8 @@ function Home() {
         <Trending />
         <h2>Mejor Puntuadas</h2>
         <Rating />
+        <h2>Peliculas</h2>
+        <Movies />
         <h2>Series</h2>
         <Series />
         <h2>Dibujos</h2>
